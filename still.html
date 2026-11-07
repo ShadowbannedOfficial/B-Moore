@@ -10,19 +10,25 @@
 .still-open.screen::after{z-index:3;}
 .still-open .vid-ctrls{left:var(--pad);right:auto;bottom:22px;z-index:5;}
 .still-quote{position:absolute;z-index:2;left:auto;right:var(--pad);top:73%;
-  width:min(808px,calc(100% - (2 * var(--pad))));color:#fff;text-align:left;pointer-events:none;
-  box-sizing:border-box;padding:0;}
-.still-quote p{margin:0;font-family:var(--text);font-style:italic;font-weight:400;
+  display:grid;grid-template-columns:minmax(0,max-content) max-content;justify-content:end;
+  width:max-content;max-width:calc(100% - (2 * var(--pad)));
+  color:#fff;text-align:left;pointer-events:none;box-sizing:border-box;padding:0;}
+.still-quote p{display:contents;margin:0;font-family:var(--text);font-style:italic;font-weight:400;
   font-size:28px;line-height:normal;text-transform:lowercase;letter-spacing:normal;}
-.still-quote cite{display:block;margin-top:10px;text-align:right;font-style:normal;
+.still-quote .q-line{grid-column:1;display:block;min-width:0;}
+.still-quote .q-end{grid-row:2;justify-self:stretch;text-align:right;}
+.still-quote cite{grid-column:2;grid-row:3;justify-self:start;align-self:start;
+  margin:10px 0 0;text-align:left;white-space:nowrap;font-style:normal;
   font-size:20px;letter-spacing:normal;color:#fff;}
 @media (max-width:979px){
-  .still-quote{left:auto;right:var(--pad);width:min(808px,calc(100% - (2 * var(--pad))));top:72%;}
+  .still-quote{top:72%;}
   .still-quote p{font-size:clamp(18px,3.2vw,26px);}
 }
 @media (max-width:760px){
-  .still-quote{left:auto;right:var(--pad);width:calc(100% - (2 * var(--pad)));top:70%;padding-right:0;}
+  .still-quote{top:70%;left:var(--pad);right:var(--pad);width:auto;max-width:none;
+    grid-template-columns:minmax(0,1fr) max-content;}
   .still-quote p{font-size:clamp(15px,4.2vw,20px);}
+  .still-quote cite{font-size:16px;}
 }
 .commission{background:#000;color:#fff;padding:clamp(48px,8vw,96px) var(--pad) clamp(72px,10vw,120px);}
 .commission-in{max-width:34em;margin:0 auto;text-align:center;}
@@ -53,7 +59,7 @@
     <button class="vid-toggle" type="button">Pause</button>
   </div>
   <blockquote class="still-quote">
-    <p>&ldquo;the camera can film my face, but until it<br>captures my soul, you don&rsquo;t have anything&rdquo;</p>
+    <p><span class="q-line">&ldquo;the camera can film my face, but until it</span><span class="q-line q-end">captures my soul, you don&rsquo;t have anything&rdquo;</span></p>
     <cite>-Al Pacino</cite>
   </blockquote>
 </section>
