@@ -17,10 +17,11 @@
 .gn-lockup .sub{font-family:"Nimbus Sans",sans-serif;font-weight:700;font-size:clamp(18px,2.4vw,26px);
   letter-spacing:.18em;line-height:1;margin:7px calc(-.18em + 4px) 0 0;text-align:center;}
 .gal-gap{height:24px;background:#000;}
-.page-top .lookbook{max-width:36em;margin:0 auto 16px;font-size:14px;line-height:1.75;color:rgba(255,255,255,.82);}
-.page-top .lookbook:last-child{margin-bottom:0;}
-.page-top .here-btn{display:inline-block;margin:0 0 0 .4em;padding:11px 22px;vertical-align:middle;border:1px solid #fff;background:transparent;color:#fff;text-decoration:none;font-family:var(--text);font-stretch:75%;font-size:12px;letter-spacing:.16em;text-transform:uppercase;line-height:1;}
-.page-top .here-btn:hover{background:rgba(255,255,255,.08);}
+.gal-info{background:#000;color:#fff;text-align:center;padding:clamp(36px,5vw,56px) var(--pad) clamp(48px,6vw,72px);}
+.gal-info .lookbook{max-width:36em;margin:0 auto 16px;font-size:14px;line-height:1.75;color:rgba(255,255,255,.82);}
+.gal-info .lookbook:last-child{margin-bottom:0;}
+.gal-info .here-btn{display:inline-block;margin:0 0 0 .4em;padding:11px 22px;vertical-align:middle;border:1px solid #fff;background:transparent;color:#fff;text-decoration:none;font-family:var(--text);font-stretch:75%;font-size:12px;letter-spacing:.16em;text-transform:uppercase;line-height:1;}
+.gal-info .here-btn:hover{background:rgba(255,255,255,.08);}
 .gal-paper{background:#fff;color:#111;padding:clamp(12px,2vw,24px) 0 clamp(48px,8vw,88px);}
 .gal-paper .fviewer{margin-top:0;padding-top:clamp(12px,2vw,20px);border-top:0;}
 .gal-paper .fgrp{display:none !important;}
@@ -50,8 +51,6 @@
   <div class="gal-copy">
     <p class="kick" id="kick">Fine art photography</p>
     <h1 class="gn-lockup"><span class="word">GLAMNOIR</span><span class="sub">COLLECTION</span></h1>
-    <p class="lookbook">The GLAMNOIR collection is currently on view at Gallery Defi. Large-format, concept-driven portraiture presented in painted or glitter gothic frames selected for each piece.</p>
-    <p class="lookbook" id="inquiry">Gallery and collector inquiries <a class="here-btn" href="contact.html">CLICK HERE</a></p>
   </div>
 </div>
 <div class="gal-gap" id="gal-gap"></div>
@@ -67,6 +66,10 @@
     <div class="strip fstrip" id="fstrip" role="tablist" aria-label="All framed prints"></div>
   </section>
 </div>
+<section class="gal-info" id="gal-info">
+  <p class="lookbook" id="blurb">The GLAMNOIR collection is currently on view at Gallery Defi. Large-format, concept-driven portraiture presented in painted or glitter gothic frames selected for each piece.</p>
+  <p class="lookbook" id="inquiry">Gallery and collector inquiries <a class="here-btn" href="contact.html">CLICK HERE</a></p>
+</section>
 <footer class="site-foot" id="site-footer">
   <span class="brand"><span class="brand-name">B.MOORE</span></span>
   <p class="foot-mail"><a href="contact.html">Contact</a></p>
