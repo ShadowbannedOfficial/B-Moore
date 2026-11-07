@@ -52,11 +52,11 @@
 .sb-hero{position:relative;margin:0;}
 .sb-hero img{width:100%;height:auto;display:block;background:#111;}
 .sb-row .sb-hero img{aspect-ratio:4/5;object-fit:cover;object-position:center;background:#080808;}
-.sb-hero .sb-shop{position:absolute;left:50%;bottom:clamp(18px,4vw,36px);transform:translateX(-50%);
-  display:inline-block;padding:12px 22px;border:1px solid #fff;background:rgba(0,0,0,.45);
+.sb-shop-row{margin:clamp(28px,4vw,40px) 0 0;text-align:center;}
+.sb-shop{display:inline-block;padding:12px 22px;border:1px solid #fff;background:transparent;
   color:#fff;font-family:var(--text);font-stretch:75%;font-size:12px;letter-spacing:.14em;
-  text-transform:uppercase;text-decoration:none;backdrop-filter:blur(2px);}
-.sb-hero .sb-shop:hover{background:rgba(0,0,0,.7);}
+  text-transform:uppercase;text-decoration:none;}
+.sb-shop:hover{background:rgba(255,255,255,.08);}
 @media (max-width:980px){
   .look-grid.pairs{grid-template-columns:repeat(2,1fr);}
 }
@@ -95,9 +95,8 @@
     </div>
     <div class="brand-in">
       <div class="look-grid three sb-row">
-      <figure class="sb-hero">
+      <figure>
         <img src="img/fashion/shadowbanned/01-hero.jpg" alt="Model in a Shadowbanned crewneck against a fluted column." loading="eager">
-        <a class="sb-shop" href="https://shadowbannedofficial.com" target="_blank" rel="noopener noreferrer">Shop Shadowbanned</a>
       </figure>
       <figure>
         <img src="img/fashion/shadowbanned/07-tee-flat.jpg" alt="Model walking past a blue wall in a Shadowbanned crewneck." loading="eager">
@@ -106,6 +105,7 @@
         <img src="img/fashion/shadowbanned/12-low-signal.jpg" alt="Model in a Shadowbanned tee, standing in heavy shadow." loading="eager">
       </figure>
       </div>
+      <p class="sb-shop-row"><a class="sb-shop" href="https://shadowbannedofficial.com" target="_blank" rel="noopener noreferrer">Shop Shadowbanned</a></p>
     </div>
   </section>
   <div class="gn-logo-band">
