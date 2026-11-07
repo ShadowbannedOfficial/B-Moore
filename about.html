@@ -6,12 +6,20 @@
 <title>B. Moore — About</title>
 <link rel="stylesheet" href="css/site.css">
 <style>
+@font-face{font-family:"Courier Prime";src:url(fonts/courier-prime/CourierPrime-Regular.ttf) format("truetype");font-weight:400;font-style:normal;font-display:swap;}
+@font-face{font-family:"Courier Prime";src:url(fonts/courier-prime/CourierPrime-Italic.ttf) format("truetype");font-weight:400;font-style:italic;font-display:swap;}
+@font-face{font-family:"Courier Prime";src:url(fonts/courier-prime/CourierPrime-Bold.ttf) format("truetype");font-weight:700;font-style:normal;font-display:swap;}
+@font-face{font-family:"Courier Prime";src:url(fonts/courier-prime/CourierPrime-BoldItalic.ttf) format("truetype");font-weight:700;font-style:italic;font-display:swap;}
+.about-in,.about-in .title,.about-in .lede,.about-in .copy,.about-in .pull{
+  font-family:"Courier Prime","Courier New",Courier,monospace;}
+.about-in .lede{font-weight:400;}
+.about-in .title{font-weight:700;}
 .about{min-height:100svh;display:flex;align-items:center;padding:150px var(--pad) 90px;}
 .about .bg{object-position:60% 40%;}
 .about::before{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(0,0,0,.82),rgba(0,0,0,.45) 60%,rgba(0,0,0,.25));z-index:1;}
 .about-in{position:relative;z-index:2;max-width:34em;}
 @media (max-width:760px){.about::before{background:rgba(0,0,0,.72);}.about{align-items:flex-start;padding-top:120px;}}
-.about .lede{font-family:var(--display);font-weight:300;font-size:clamp(19px,2vw,24px);letter-spacing:.04em;line-height:1.35;margin:22px 0 26px;}
+.about .lede{font-weight:400;font-size:clamp(19px,2vw,24px);letter-spacing:.02em;line-height:1.35;margin:22px 0 26px;}
 .about .pull{font-style:italic;}
 </style>
 </head>

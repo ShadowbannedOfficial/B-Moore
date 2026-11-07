@@ -18,10 +18,26 @@
 .brand-head .intro{max-width:32em;margin:0 auto;font-size:13px;line-height:1.7;color:rgba(255,255,255,.78);}
 .brand-head .intro p{margin:0 0 10px;}
 .brand-head .intro p:last-child{margin-bottom:0;}
-.gn-logo-band{background:#000;padding:clamp(40px,6vw,60px) var(--pad) clamp(28px,4vw,40px);text-align:center;}
-.gn-logo-band img{display:block;margin:0 auto;width:min(480px,70vw);height:auto;}
-.gn-logo-band .gn-line{margin:18px auto 0;max-width:32em;font-size:13px;line-height:1.7;
+.gn-logo-band{background:#000;padding:clamp(20px,3vw,30px) var(--pad) clamp(14px,2vw,20px);text-align:center;}
+.gn-logo-band .gn-line{margin:9px auto 0;max-width:32em;font-size:13px;line-height:1.7;
   color:rgba(255,255,255,.72);font-weight:400;letter-spacing:.02em;}
+.gn-lockup{display:inline-flex;flex-direction:column;align-items:center;margin:0 auto;color:#fff;}
+.gn-lockup .word{font-family:"Nimbus Sans",sans-serif;font-weight:700;font-size:clamp(42px,6.4vw,68px);
+  letter-spacing:.04em;line-height:.9;margin:0;}
+.gn-lockup .sub{font-family:"Nimbus Sans",sans-serif;font-weight:700;font-size:clamp(18px,2.4vw,26px);
+  letter-spacing:.18em;line-height:1;margin:7px calc(-.18em + 4px) 0 0;text-align:center;}
+.sb-row img{width:100%;aspect-ratio:4/5;object-fit:cover;object-position:center;background:#080808;}
+.look-grid.pairs{grid-template-columns:repeat(4,1fr);}
+.shirt-swap{position:relative;display:block;width:100%;aspect-ratio:4/5;padding:0;border:0;background:#080808;cursor:pointer;color:inherit;}
+.look-grid.shop .shirt-swap img{position:absolute;inset:0;width:100%;height:100%;aspect-ratio:auto;object-fit:contain;object-position:center;background:transparent;}
+.shirt-swap .is-back{opacity:0;}
+.shirt-swap:hover .is-back,
+.shirt-swap.show-back .is-back,
+.shirt-swap:focus-visible .is-back{opacity:1;}
+.shirt-swap:focus-visible{outline:1px solid #fff;outline-offset:3px;}
+@media (hover:none){
+  .shirt-swap:hover:not(.show-back):not(:focus-visible) .is-back{opacity:0;}
+}
 .look-grid{display:grid;gap:12px;margin:0;}
 .look-grid.three{grid-template-columns:repeat(3,1fr);}
 .look-grid.sb{grid-template-columns:1fr 1fr;}
@@ -35,15 +51,21 @@
   color:rgba(255,255,255,.55);line-height:1.4;font-stretch:75%;}
 .sb-hero{position:relative;margin:0;}
 .sb-hero img{width:100%;height:auto;display:block;background:#111;}
+.sb-row .sb-hero img{aspect-ratio:4/5;object-fit:cover;object-position:center;background:#080808;}
 .sb-hero .sb-shop{position:absolute;left:50%;bottom:clamp(18px,4vw,36px);transform:translateX(-50%);
   display:inline-block;padding:12px 22px;border:1px solid #fff;background:rgba(0,0,0,.45);
   color:#fff;font-family:var(--text);font-stretch:75%;font-size:12px;letter-spacing:.14em;
   text-transform:uppercase;text-decoration:none;backdrop-filter:blur(2px);}
 .sb-hero .sb-shop:hover{background:rgba(0,0,0,.7);}
+@media (max-width:980px){
+  .look-grid.pairs{grid-template-columns:repeat(2,1fr);}
+}
 @media (max-width:760px){
   .fashion-stack{padding-top:clamp(88px,16vw,120px);}
   .look-grid.three{grid-template-columns:1fr;max-width:420px;margin:0 auto;}
   .look-grid.sb{grid-template-columns:1fr 1fr;gap:8px;}
+  .look-grid.pairs{grid-template-columns:1fr;max-width:420px;margin:0 auto;}
+  .gn-lockup .sub{font-size:18px;letter-spacing:.14em;margin-right:calc(-.14em + 2px);}
 }
 @media (max-width:420px){
   .look-grid.sb{grid-template-columns:1fr;max-width:420px;margin:0 auto;}
@@ -72,24 +94,22 @@
       <img class="banner photo" src="img/fashion/shadowbanned/banner.jpg" alt="SHADOWBANNED" loading="eager">
     </div>
     <div class="brand-in">
-      <div class="look-grid feature">
+      <div class="look-grid three sb-row">
       <figure class="sb-hero">
         <img src="img/fashion/shadowbanned/01-hero.jpg" alt="Model in a Shadowbanned crewneck against a fluted column." loading="eager">
         <a class="sb-shop" href="https://shadowbannedofficial.com" target="_blank" rel="noopener noreferrer">Shop Shadowbanned</a>
       </figure>
-      </div>
-      <div class="look-grid sb">
-      <figure>
-        <img src="img/fashion/shadowbanned/12-low-signal.jpg" alt="Model in a Shadowbanned tee, standing in heavy shadow." loading="eager">
-      </figure>
       <figure>
         <img src="img/fashion/shadowbanned/07-tee-flat.jpg" alt="Model walking past a blue wall in a Shadowbanned crewneck." loading="eager">
+      </figure>
+      <figure>
+        <img src="img/fashion/shadowbanned/12-low-signal.jpg" alt="Model in a Shadowbanned tee, standing in heavy shadow." loading="eager">
       </figure>
       </div>
     </div>
   </section>
   <div class="gn-logo-band">
-    <img src="img/fashion/glamnoir/logo-wordmark.png" alt="GLAMNOIR" loading="eager">
+    <h2 class="gn-lockup"><span class="word">GLAMNOIR</span><span class="sub">COLLECTION</span></h2>
     <p class="gn-line">glamour is a dark place.</p>
   </div>
   <section class="brand-col" id="glamnoir" aria-label="GLAMNOIR">
@@ -108,18 +128,34 @@
         <img src="img/fashion/glamnoir/editorial-03.jpg" alt="GLAMNOIR editorial." loading="eager">
       </figure>
       </div>
-      <div class="look-grid three shop">
+      <div class="look-grid pairs shop">
       <figure>
-        <img src="img/fashion/glamnoir/front-01-up-in-smoke.jpg" alt="Up in Smoke, front flat-lay on washed black." loading="eager">
-        <figcaption>Up in Smoke</figcaption>
+        <button class="shirt-swap" type="button" data-name="Up in Smoke, black" aria-pressed="false">
+          <img class="is-front" src="img/fashion/glamnoir/product/glamnoir-up-in-smoke-black-front.jpg" alt="">
+          <img class="is-back" src="img/fashion/glamnoir/product/glamnoir-up-in-smoke-black-back.jpg" alt="">
+        </button>
+        <figcaption>Up in Smoke, black</figcaption>
       </figure>
       <figure>
-        <img src="img/fashion/glamnoir/front-02-hard-pill.jpg" alt="Hard Pill to Swallow, front flat-lay." loading="eager">
-        <figcaption>Hard Pill to Swallow</figcaption>
+        <button class="shirt-swap" type="button" data-name="Hard Pill to Swallow, black" aria-pressed="false">
+          <img class="is-front" src="img/fashion/glamnoir/product/glamnoir-hard-pill-to-swallow-black-front.jpg" alt="">
+          <img class="is-back" src="img/fashion/glamnoir/product/glamnoir-hard-pill-to-swallow-black-back.jpg" alt="">
+        </button>
+        <figcaption>Hard Pill to Swallow, black</figcaption>
       </figure>
       <figure>
-        <img src="img/fashion/glamnoir/front-03-addiction.jpg" alt="Addiction, front flat-lay." loading="eager">
-        <figcaption>Addiction</figcaption>
+        <button class="shirt-swap" type="button" data-name="Up in Smoke, white" aria-pressed="false">
+          <img class="is-front" src="img/fashion/glamnoir/product/glamnoir-up-in-smoke-white-front.jpg" alt="">
+          <img class="is-back" src="img/fashion/glamnoir/product/glamnoir-up-in-smoke-white-back.jpg" alt="">
+        </button>
+        <figcaption>Up in Smoke, white</figcaption>
+      </figure>
+      <figure>
+        <button class="shirt-swap" type="button" data-name="Addiction, white" aria-pressed="false">
+          <img class="is-front" src="img/fashion/glamnoir/product/glamnoir-addiction-white-front.jpg" alt="">
+          <img class="is-back" src="img/fashion/glamnoir/product/glamnoir-addiction-white-back.jpg" alt="">
+        </button>
+        <figcaption>Addiction, white</figcaption>
       </figure>
       </div>
     </div>
@@ -131,5 +167,22 @@
   <p class="foot-meta">All images &copy; B. Moore. Not for reproduction without permission.</p>
 </footer>
 <script src="js/nav.js"></script>
+<script>
+(function(){
+  var hoverFine = window.matchMedia("(hover: hover) and (pointer: fine)");
+  document.querySelectorAll(".shirt-swap").forEach(function(btn){
+    var name = btn.getAttribute("data-name");
+    function label(back){
+      btn.setAttribute("aria-pressed", back ? "true" : "false");
+      btn.setAttribute("aria-label", back ? name + ", back. Show the front." : name + ", front. Show the back.");
+    }
+    label(false);
+    btn.addEventListener("click", function(){
+      if (hoverFine.matches) return;
+      label(btn.classList.toggle("show-back"));
+    });
+  });
+})();
+</script>
 </body>
 </html>

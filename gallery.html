@@ -7,8 +7,16 @@
 <link rel="stylesheet" href="css/site.css">
 <link rel="stylesheet" href="css/lookbook.css">
 <style>
-.page-top{background:#000;padding:clamp(110px,12vw,150px) var(--pad) 36px;text-align:center;}
-.page-top .title{color:#fff;margin-bottom:18px;}
+.page-top{background:#000;padding:92px 0 0;text-align:center;}
+.gal-eyes{display:block;width:100%;height:auto;}
+.gal-copy{padding:24px var(--pad) 0;}
+.gal-copy .kick{margin:0 0 9px;}
+.gn-lockup{display:inline-flex;flex-direction:column;align-items:center;margin:0 auto 9px;color:#fff;}
+.gn-lockup .word{font-family:"Nimbus Sans",sans-serif;font-weight:700;font-size:clamp(42px,6.4vw,68px);
+  letter-spacing:.04em;line-height:.9;margin:0;}
+.gn-lockup .sub{font-family:"Nimbus Sans",sans-serif;font-weight:700;font-size:clamp(18px,2.4vw,26px);
+  letter-spacing:.18em;line-height:1;margin:7px calc(-.18em + 4px) 0 0;text-align:center;}
+.gal-gap{height:24px;background:#000;}
 .page-top .lookbook{max-width:36em;margin:0 auto 16px;font-size:14px;line-height:1.75;color:rgba(255,255,255,.82);}
 .page-top .lookbook:last-child{margin-bottom:0;}
 .page-top .here-btn{display:inline-block;margin:0 0 0 .4em;padding:11px 22px;vertical-align:middle;border:1px solid #fff;background:transparent;color:#fff;text-decoration:none;font-family:var(--text);font-stretch:75%;font-size:12px;letter-spacing:.16em;text-transform:uppercase;line-height:1;}
@@ -16,6 +24,12 @@
 .gal-paper{background:#fff;color:#111;padding:clamp(12px,2vw,24px) 0 clamp(48px,8vw,88px);}
 .gal-paper .fviewer{margin-top:0;padding-top:clamp(12px,2vw,20px);border-top:0;}
 .gal-paper .fgrp{display:none !important;}
+@media (max-width:760px){
+  .page-top{padding-top:78px;}
+  .gal-copy{padding-top:16px;}
+  .gal-gap{height:16px;}
+  .gn-lockup .sub{font-size:18px;letter-spacing:.14em;margin-right:calc(-.14em + 2px);}
+}
 </style>
 </head>
 <body>
@@ -32,11 +46,15 @@
   </nav>
 </header>
 <div class="page-top">
-  <p class="kick">Fine art photography</p>
-  <h1 class="title">glamnoir</h1>
-  <p class="lookbook">The GLAMNOIR collection is currently on view at Gallery Defi. Large-format, concept-driven portraiture presented in painted or glitter gothic frames selected for each piece.</p>
-  <p class="lookbook">Gallery and collector inquiries <a class="here-btn" href="contact.html">CLICK HERE</a></p>
+  <img class="gal-eyes" src="img/gallery/eyes.jpg" alt="Close portrait of eyes">
+  <div class="gal-copy">
+    <p class="kick" id="kick">Fine art photography</p>
+    <h1 class="gn-lockup"><span class="word">GLAMNOIR</span><span class="sub">COLLECTION</span></h1>
+    <p class="lookbook">The GLAMNOIR collection is currently on view at Gallery Defi. Large-format, concept-driven portraiture presented in painted or glitter gothic frames selected for each piece.</p>
+    <p class="lookbook" id="inquiry">Gallery and collector inquiries <a class="here-btn" href="contact.html">CLICK HERE</a></p>
+  </div>
 </div>
+<div class="gal-gap" id="gal-gap"></div>
 <div class="gal-paper paper">
   <section class="fviewer" id="fviewer" aria-roledescription="carousel" aria-label="Framed prints">
     <div class="fstage" id="fstage" tabindex="0">
