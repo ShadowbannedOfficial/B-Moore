@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>B. Moore — Fashion</title>
+<link rel="stylesheet" href="css/site.css">
+<style>
+.fashion-stack{display:flex;flex-direction:column;gap:clamp(64px,9vw,110px);
+  padding:clamp(96px,11vw,130px) 0 clamp(56px,8vw,96px);background:#000;color:#fff;}
+.brand-col{min-width:0;width:100%;margin:0;max-width:none;}
+.brand-head{margin:0 0 28px;text-align:center;}
+.brand-head .banner,
+.brand-head .banner.photo{display:block;width:100%;max-width:none;height:auto;margin:0 0 22px;}
+.brand-in{max-width:1100px;margin:0 auto;padding:0 var(--pad);}
+.brand-head .nyfw-band{background:#000;padding:clamp(8px,2vw,20px) var(--pad) clamp(32px,5vw,52px);text-align:center;}
+.brand-head .nyfw{display:block;margin:0 auto;width:min(400px,100%);max-width:100%;height:auto;opacity:.92;}
+.brand-head .intro{max-width:32em;margin:0 auto;font-size:13px;line-height:1.7;color:rgba(255,255,255,.78);}
+.brand-head .intro p{margin:0 0 10px;}
+.brand-head .intro p:last-child{margin-bottom:0;}
+.gn-logo-band{background:#000;padding:clamp(40px,6vw,60px) var(--pad) clamp(28px,4vw,40px);text-align:center;}
+.gn-logo-band img{display:block;margin:0 auto;width:min(480px,70vw);height:auto;}
+.gn-logo-band .gn-line{margin:18px auto 0;max-width:32em;font-size:13px;line-height:1.7;
+  color:rgba(255,255,255,.72);font-weight:400;letter-spacing:.02em;}
+.look-grid{display:grid;gap:12px;margin:0;}
+.look-grid.three{grid-template-columns:repeat(3,1fr);}
+.look-grid.sb{grid-template-columns:1fr 1fr;}
+.look-grid.feature{grid-template-columns:1fr;margin:0 0 12px;}
+.look-grid figure{margin:0;}
+.look-grid img{width:100%;height:auto;display:block;background:#111;}
+.look-grid.sb img,.look-grid.editorial img{width:100%;aspect-ratio:4/5;object-fit:cover;object-position:center;background:#080808;}
+.look-grid.editorial img{object-position:center bottom;}
+.look-grid.shop img{width:100%;aspect-ratio:4/5;object-fit:contain;object-position:center;background:#080808;}
+.look-grid figcaption{margin-top:8px;font-size:10px;letter-spacing:.08em;text-transform:uppercase;
+  color:rgba(255,255,255,.55);line-height:1.4;font-stretch:75%;}
+.sb-hero{position:relative;margin:0;}
+.sb-hero img{width:100%;height:auto;display:block;background:#111;}
+.sb-hero .sb-shop{position:absolute;left:50%;bottom:clamp(18px,4vw,36px);transform:translateX(-50%);
+  display:inline-block;padding:12px 22px;border:1px solid #fff;background:rgba(0,0,0,.45);
+  color:#fff;font-family:var(--text);font-stretch:75%;font-size:12px;letter-spacing:.14em;
+  text-transform:uppercase;text-decoration:none;backdrop-filter:blur(2px);}
+.sb-hero .sb-shop:hover{background:rgba(0,0,0,.7);}
+@media (max-width:760px){
+  .fashion-stack{padding-top:clamp(88px,16vw,120px);}
+  .look-grid.three{grid-template-columns:1fr;max-width:420px;margin:0 auto;}
+  .look-grid.sb{grid-template-columns:1fr 1fr;gap:8px;}
+}
+@media (max-width:420px){
+  .look-grid.sb{grid-template-columns:1fr;max-width:420px;margin:0 auto;}
+}
+</style>
+</head>
+<body>
+<header class="site-head">
+  <a class="brand" href="index.html" aria-label="B. Moore, home"><span class="brand-name">B.MOORE</span><span class="brand-sub">Multi-disciplinary artist</span></a>
+  <button class="menu-btn" type="button" aria-expanded="false" aria-controls="site-nav"><span></span><span></span><span></span><span class="sr">Menu</span></button>
+  <nav class="site-nav" id="site-nav" aria-label="Main">
+    <a href="about.html">About</a>
+    <a href="still.html">Still</a>
+    <a href="motion.html">Motion</a>
+    <a href="gallery.html">Gallery</a>
+    <a href="fashion.html" class="here" aria-current="page">Fashion</a>
+    <a href="contact.html">Contact</a>
+  </nav>
+</header>
+<main class="fashion-stack">
+  <section class="brand-col" id="shadowbanned" aria-label="SHADOWBANNED">
+    <div class="brand-head">
+      <div class="nyfw-band">
+        <img class="nyfw" src="img/fashion/shadowbanned/nyfw-mark.png" alt="NYFW F/W 2027" loading="eager">
+      </div>
+      <img class="banner photo" src="img/fashion/shadowbanned/banner.jpg" alt="SHADOWBANNED" loading="eager">
+    </div>
+    <div class="brand-in">
+      <div class="look-grid feature">
+      <figure class="sb-hero">
+        <img src="img/fashion/shadowbanned/01-hero.jpg" alt="Model in a Shadowbanned crewneck against a fluted column." loading="eager">
+        <a class="sb-shop" href="https://shadowbannedofficial.com" target="_blank" rel="noopener noreferrer">Shop Shadowbanned</a>
+      </figure>
+      </div>
+      <div class="look-grid sb">
+      <figure>
+        <img src="img/fashion/shadowbanned/12-low-signal.jpg" alt="Model in a Shadowbanned tee, standing in heavy shadow." loading="eager">
+      </figure>
+      <figure>
+        <img src="img/fashion/shadowbanned/07-tee-flat.jpg" alt="Model walking past a blue wall in a Shadowbanned crewneck." loading="eager">
+      </figure>
+      </div>
+    </div>
+  </section>
+  <div class="gn-logo-band">
+    <img src="img/fashion/glamnoir/logo-wordmark.png" alt="GLAMNOIR" loading="eager">
+    <p class="gn-line">glamour is a dark place.</p>
+  </div>
+  <section class="brand-col" id="glamnoir" aria-label="GLAMNOIR">
+    <div class="brand-head">
+      <img class="banner photo" src="img/fashion/glamnoir/banner.jpg" alt="GLAMNOIR — Up in Smoke, back of shirt" loading="eager">
+    </div>
+    <div class="brand-in">
+      <div class="look-grid three editorial" style="margin-bottom:12px;">
+      <figure>
+        <img src="img/fashion/glamnoir/editorial-01.jpg" alt="GLAMNOIR editorial." loading="eager">
+      </figure>
+      <figure>
+        <img src="img/fashion/glamnoir/editorial-02.jpg" alt="GLAMNOIR editorial." loading="eager">
+      </figure>
+      <figure>
+        <img src="img/fashion/glamnoir/editorial-03.jpg" alt="GLAMNOIR editorial." loading="eager">
+      </figure>
+      </div>
+      <div class="look-grid three shop">
+      <figure>
+        <img src="img/fashion/glamnoir/front-01-up-in-smoke.jpg" alt="Up in Smoke, front flat-lay on washed black." loading="eager">
+        <figcaption>Up in Smoke</figcaption>
+      </figure>
+      <figure>
+        <img src="img/fashion/glamnoir/front-02-hard-pill.jpg" alt="Hard Pill to Swallow, front flat-lay." loading="eager">
+        <figcaption>Hard Pill to Swallow</figcaption>
+      </figure>
+      <figure>
+        <img src="img/fashion/glamnoir/front-03-addiction.jpg" alt="Addiction, front flat-lay." loading="eager">
+        <figcaption>Addiction</figcaption>
+      </figure>
+      </div>
+    </div>
+  </section>
+</main>
+<footer class="site-foot" id="site-footer">
+  <span class="brand"><span class="brand-name">B.MOORE</span></span>
+  <p class="foot-mail"><a href="contact.html">Contact</a></p>
+  <p class="foot-meta">All images &copy; B. Moore. Not for reproduction without permission.</p>
+</footer>
+<script src="js/nav.js"></script>
+</body>
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>B. Moore</title>
+<link rel="stylesheet" href="css/site.css">
+<style>
+body{background:#000;}.landing{height:100vh;height:100svh;}
+.landing-enter{position:absolute;left:0;right:0;top:50%;z-index:4;display:flex;justify-content:center;
+  transform:translateY(-50%);pointer-events:none;}
+.enter-btn{pointer-events:auto;display:inline-block;background:none;border:0;border-top:1px solid rgba(255,255,255,.7);
+  color:#fff;padding:14px 4px 6px;font-family:var(--display);font-weight:300;font-size:clamp(18px,2.2vw,22px);
+  letter-spacing:.28em;text-transform:uppercase;opacity:.92;}
+.enter-btn:hover{opacity:1;border-top-color:#fff;}
+</style>
+</head>
+<body class="landing-page">
+<header class="site-head">
+  <a class="brand" href="index.html" aria-label="B. Moore, home"><span class="brand-name">B.MOORE</span><span class="brand-sub">Multi-disciplinary artist</span></a>
+  <button class="menu-btn" type="button" aria-expanded="false" aria-controls="site-nav"><span></span><span></span><span></span><span class="sr">Menu</span></button>
+  <nav class="site-nav" id="site-nav" aria-label="Main">
+    <a href="about.html">About</a>
+    <a href="still.html">Still</a>
+    <a href="motion.html">Motion</a>
+    <a href="gallery.html">Gallery</a>
+    <a href="fashion.html">Fashion</a>
+    <a href="contact.html">Contact</a>
+  </nav>
+</header>
+<main>
+  <section class="bleed screen landing" aria-label="Director reel">
+    <video data-bg src="media/motion-skyline.mp4" poster="media/motion-skyline-poster.jpg" muted autoplay loop playsinline preload="auto" aria-label="Motion: city footage at dusk and night"></video>
+    <div class="vid-ctrls">
+      <button class="vid-toggle" type="button">Pause</button>
+    </div>
+    <div class="landing-enter">
+      <a class="enter-btn" href="about.html">Enter</a>
+    </div>
+  </section>
+</main>
+<script src="js/nav.js"></script>
+</body>
+</html>

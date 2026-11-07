@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>B. Moore — About</title>
+<link rel="stylesheet" href="css/site.css">
+<style>
+.about{min-height:100svh;display:flex;align-items:center;padding:150px var(--pad) 90px;}
+.about .bg{object-position:60% 40%;}
+.about::before{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(0,0,0,.82),rgba(0,0,0,.45) 60%,rgba(0,0,0,.25));z-index:1;}
+.about-in{position:relative;z-index:2;max-width:34em;}
+@media (max-width:760px){.about::before{background:rgba(0,0,0,.72);}.about{align-items:flex-start;padding-top:120px;}}
+.about .lede{font-family:var(--display);font-weight:300;font-size:clamp(19px,2vw,24px);letter-spacing:.04em;line-height:1.35;margin:22px 0 26px;}
+.about .pull{font-style:italic;}
+</style>
+</head>
+<body>
+<header class="site-head">
+  <a class="brand" href="index.html" aria-label="B. Moore, home"><span class="brand-name">B.MOORE</span><span class="brand-sub">Multi-disciplinary artist</span></a>
+  <button class="menu-btn" type="button" aria-expanded="false" aria-controls="site-nav"><span></span><span></span><span></span><span class="sr">Menu</span></button>
+  <nav class="site-nav" id="site-nav" aria-label="Main">
+    <a href="about.html" class="here" aria-current="page">About</a>
+    <a href="still.html">Still</a>
+    <a href="motion.html">Motion</a>
+    <a href="gallery.html">Gallery</a>
+    <a href="fashion.html">Fashion</a>
+    <a href="contact.html">Contact</a>
+  </nav>
+</header>
+<main>
+  <section class="bleed about">
+    <img class="bg" src="img/about/about-stairs.jpg" alt="" loading="eager">
+    <div class="about-in">
+      <h1 class="title">About</h1>
+      <p class="lede">Gallery artist, filmmaker, and clothing designer.</p>
+      <div class="copy">
+        <p>B. Moore is an American filmmaker and gallery photographer known for his dramatic imagery that tells an interesting story.</p>
+        <p>He began his work with visuals as a child, filming short skits with his friends, then skate videos, which were sold in stores all over the world. His first narrative film will premiere in 2026.</p>
+        <p>Today his focus is as a creative director, fine art photographer, clothing designer and filmmaker.</p>
+        <p class="pull">Whether it&rsquo;s a single frame of a photograph or fifteen thousand of them in a narrative film, story comes first.</p>
+      </div>
+    </div>
+  </section>
+</main>
+<footer class="site-foot" id="site-footer">
+  <span class="brand"><span class="brand-name">B.MOORE</span></span>
+  <p class="foot-mail"><a href="contact.html">Contact</a></p>
+  <p class="foot-meta">All images &copy; B. Moore. Not for reproduction without permission.</p>
+</footer>
+<script src="js/nav.js"></script>
+</body>
+</html>

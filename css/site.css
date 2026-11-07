@@ -1,0 +1,115 @@
+/* B. Moore — shared styles for every page.
+   Fonts: Oswald and Open Sans (SIL Open Font License, see fonts/OFL.txt),
+   the free originals of the fonts used on the Wix site. */
+@font-face{font-family:"Oswald";src:url(../fonts/oswald.woff2) format("woff2");font-weight:200 700;font-display:swap;}
+@font-face{font-family:"Open Sans";src:url(../fonts/opensans.woff2) format("woff2");font-weight:300 800;font-stretch:75% 100%;font-display:swap;}
+@font-face{font-family:"Open Sans";src:url(../fonts/opensans-italic.woff2) format("woff2");font-weight:300 800;font-stretch:75% 100%;font-style:italic;font-display:swap;}
+
+:root{
+  --black:#000;
+  --night:#080808;
+  --white:#fff;
+  --grey:#7f7e7e;
+  --light:#dddddd;
+  --display:"Oswald","Arial Narrow","Helvetica Neue",Arial,sans-serif;
+  --text:"Open Sans","Helvetica Neue",Helvetica,Arial,sans-serif;
+  --pad:clamp(20px,5vw,72px);
+}
+*{box-sizing:border-box;}
+html{-webkit-text-size-adjust:100%;}
+body{margin:0;background:var(--night);color:var(--white);font-family:var(--text);-webkit-font-smoothing:antialiased;}
+a{color:inherit;text-decoration:none;}
+img{max-width:100%;}
+.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap;}
+
+/* ---------- header: logo with a thin bar, nav items sitting under a line ---------- */
+.site-head{
+  position:absolute;top:0;left:0;right:0;z-index:50;
+  display:flex;align-items:flex-start;justify-content:space-between;gap:28px;
+  padding:26px var(--pad) 0;
+  color:var(--white);
+  background:linear-gradient(rgba(0,0,0,.45),rgba(0,0,0,0));
+}
+.brand{position:relative;z-index:60;display:block;border-left:2px solid var(--white);padding:1px 0 1px 9px;line-height:1;}
+.brand-name{display:block;font-family:var(--display);font-weight:300;font-size:23px;letter-spacing:.13em;}
+.brand-sub{display:block;margin-top:5px;font-family:var(--text);font-stretch:75%;font-weight:300;font-size:10px;letter-spacing:.07em;text-transform:uppercase;}
+.site-nav{display:flex;gap:5px;padding-top:2px;}
+.site-nav a{
+  width:clamp(72px,7.4vw,100px);
+  border-top:1px solid rgba(255,255,255,.6);
+  padding:11px 0 6px 4px;
+  font-family:var(--text);font-stretch:75%;font-weight:400;font-size:11.5px;letter-spacing:.05em;text-transform:uppercase;
+  transition:border-color .2s ease;
+}
+.site-nav a:hover{border-top-color:#fff;}
+.site-nav a.here{border-top:3px solid #fff;padding-top:9px;}
+.menu-btn{display:none;}
+
+@media (max-width:760px){
+  .site-head{padding:18px 20px 0;align-items:center;}
+  .brand-name{font-size:20px;}
+  .brand-sub{font-size:9px;}
+  .menu-btn{
+    display:flex;flex-direction:column;justify-content:center;gap:6px;
+    width:44px;height:44px;margin-right:-8px;padding:0 10px;
+    background:none;border:0;cursor:pointer;position:relative;z-index:60;
+  }
+  .menu-btn span:not(.sr){display:block;height:1px;background:#fff;transition:transform .25s ease,opacity .2s ease;}
+  .menu-open .menu-btn span:nth-child(1){transform:translateY(7px) rotate(45deg);}
+  .menu-open .menu-btn span:nth-child(2){opacity:0;}
+  .menu-open .menu-btn span:nth-child(3){transform:translateY(-7px) rotate(-45deg);}
+  .site-nav{
+    position:fixed;inset:0;z-index:55;
+    flex-direction:column;justify-content:center;gap:0;
+    padding:90px 28px 40px;background:rgba(0,0,0,.96);
+    opacity:0;visibility:hidden;transition:opacity .25s ease,visibility .25s;
+  }
+  .menu-open .site-nav{opacity:1;visibility:visible;}
+  .site-nav a{width:100%;font-size:22px;letter-spacing:.08em;padding:16px 0 18px 2px;}
+  .site-nav a.here{padding-top:14px;}
+  body.menu-open{overflow:hidden;}
+}
+
+/* ---------- full-bleed video / image with the fine screen texture ---------- */
+.bleed{position:relative;overflow:hidden;background:#000;}
+.bleed video,.bleed .bg{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block;}
+.screen::after{
+  content:"";position:absolute;inset:0;pointer-events:none;
+  background-image:
+    linear-gradient(rgba(0,0,0,.34) 1px,transparent 1px),
+    linear-gradient(90deg,rgba(0,0,0,.34) 1px,transparent 1px);
+  background-size:3px 3px;
+}
+.full{height:100vh;height:100svh;min-height:520px;}
+.vid-ctrls{
+  position:absolute;right:var(--pad);bottom:26px;z-index:5;
+  display:flex;flex-direction:column;align-items:flex-start;gap:10px;
+}
+.vid-toggle,.vid-sound{
+  background:none;border:0;border-top:1px solid rgba(255,255,255,.6);color:#fff;cursor:pointer;
+  padding:9px 0 4px;min-width:84px;text-align:left;
+  font-family:var(--text);font-stretch:75%;font-size:11px;letter-spacing:.06em;text-transform:uppercase;
+  opacity:.8;
+}
+.vid-toggle:hover,.vid-sound:hover{opacity:1;}
+
+/* ---------- type ---------- */
+.title{font-family:var(--text);font-weight:700;font-size:clamp(26px,3vw,34px);letter-spacing:.01em;text-transform:uppercase;margin:0;line-height:1.1;}
+.kick{font-family:var(--text);font-stretch:75%;font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:rgba(255,255,255,.72);margin:0 0 14px;}
+.copy{max-width:31em;font-size:14px;line-height:1.7;font-weight:400;}
+.copy p{margin:0 0 16px;}
+.copy p:last-child{margin-bottom:0;}
+
+/* ---------- footer ---------- */
+.site-foot{
+  background:#000;color:#fff;
+  padding:46px var(--pad) 40px;
+  display:flex;flex-wrap:wrap;align-items:flex-end;justify-content:space-between;gap:22px;
+  border-top:1px solid #1d1d1d;
+}
+.site-foot .brand-name{font-size:18px;}
+.foot-mail{font-family:var(--text);font-stretch:75%;font-size:14px;letter-spacing:.06em;margin:0;}
+.foot-mail a{border-bottom:1px solid rgba(255,255,255,.35);padding-bottom:2px;}
+.foot-meta{flex-basis:100%;margin:6px 0 0;font-family:var(--text);font-stretch:75%;font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:#8a8a8a;}
+
+@media (prefers-reduced-motion:reduce){*{transition:none !important;scroll-behavior:auto !important;}}

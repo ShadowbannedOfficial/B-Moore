@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>B. Moore — Gallery</title>
+<link rel="stylesheet" href="css/site.css">
+<link rel="stylesheet" href="css/lookbook.css">
+<style>
+.page-top{background:#000;padding:clamp(110px,12vw,150px) var(--pad) 36px;text-align:center;}
+.page-top .title{color:#fff;margin-bottom:18px;}
+.page-top .lookbook{max-width:36em;margin:0 auto 16px;font-size:14px;line-height:1.75;color:rgba(255,255,255,.82);}
+.page-top .lookbook:last-child{margin-bottom:0;}
+.page-top .here-btn{display:inline-block;margin:0 0 0 .4em;padding:11px 22px;vertical-align:middle;border:1px solid #fff;background:transparent;color:#fff;text-decoration:none;font-family:var(--text);font-stretch:75%;font-size:12px;letter-spacing:.16em;text-transform:uppercase;line-height:1;}
+.page-top .here-btn:hover{background:rgba(255,255,255,.08);}
+.gal-paper{background:#fff;color:#111;padding:clamp(12px,2vw,24px) 0 clamp(48px,8vw,88px);}
+.gal-paper .fviewer{margin-top:0;padding-top:clamp(12px,2vw,20px);border-top:0;}
+.gal-paper .fgrp{display:none !important;}
+</style>
+</head>
+<body>
+<header class="site-head">
+  <a class="brand" href="index.html" aria-label="B. Moore, home"><span class="brand-name">B.MOORE</span><span class="brand-sub">Multi-disciplinary artist</span></a>
+  <button class="menu-btn" type="button" aria-expanded="false" aria-controls="site-nav"><span></span><span></span><span></span><span class="sr">Menu</span></button>
+  <nav class="site-nav" id="site-nav" aria-label="Main">
+    <a href="about.html">About</a>
+    <a href="still.html">Still</a>
+    <a href="motion.html">Motion</a>
+    <a href="gallery.html" class="here" aria-current="page">Gallery</a>
+    <a href="fashion.html">Fashion</a>
+    <a href="contact.html">Contact</a>
+  </nav>
+</header>
+<div class="page-top">
+  <p class="kick">Fine art photography</p>
+  <h1 class="title">glamnoir</h1>
+  <p class="lookbook">The GLAMNOIR collection is currently on view at Gallery Defi. Large-format, concept-driven portraiture presented in painted or glitter gothic frames selected for each piece.</p>
+  <p class="lookbook">Gallery and collector inquiries <a class="here-btn" href="contact.html">CLICK HERE</a></p>
+</div>
+<div class="gal-paper paper">
+  <section class="fviewer" id="fviewer" aria-roledescription="carousel" aria-label="Framed prints">
+    <div class="fstage" id="fstage" tabindex="0">
+      <button class="nav-btn fprev" id="fprev" type="button" aria-label="Previous frame">&#8249;</button>
+      <img id="fhero" src="img/frames/f05-transaction-black.jpg" alt="Transaction">
+      <button class="nav-btn fnext" id="fnext" type="button" aria-label="Next frame">&#8250;</button>
+    </div>
+    <p class="fcap" id="fcap"><span id="fcap-title"></span><span class="fgrp" id="fcap-frame"></span></p>
+    <p class="counter" id="fcounter"></p>
+    <div class="strip fstrip" id="fstrip" role="tablist" aria-label="All framed prints"></div>
+  </section>
+</div>
+<footer class="site-foot" id="site-footer">
+  <span class="brand"><span class="brand-name">B.MOORE</span></span>
+  <p class="foot-mail"><a href="contact.html">Contact</a></p>
+  <p class="foot-meta">All images &copy; B. Moore. Not for reproduction without permission.</p>
+</footer>
+<script src="js/nav.js"></script>
+<script src="js/frames.js"></script>
+</body>
+</html>
