@@ -99,6 +99,8 @@ img{max-width:100%;}
 .copy{max-width:31em;font-size:14px;line-height:1.7;font-weight:400;}
 .copy p{margin:0 0 16px;}
 .copy p:last-child{margin-bottom:0;}
+.rep{margin:22px 0 0;font-size:13px;line-height:1.6;letter-spacing:.01em;color:rgba(255,255,255,.72);}
+.rep a{border-bottom:1px solid rgba(255,255,255,.45);}
 
 /* ---------- footer ---------- */
 .site-foot{
