@@ -7,13 +7,19 @@
 <title>B. Moore — Food</title>
 <link rel="stylesheet" href="../css/site.css">
 <style>
-.food-page .site-head{position:relative;background:none;}
-.food-main{padding:clamp(48px,8vw,88px) var(--pad) clamp(72px,10vw,120px);max-width:36em;}
-.food-main .title{margin:0 0 18px;}
-.food-main .copy{margin:0;max-width:31em;font-size:14px;line-height:1.7;color:rgba(255,255,255,.82);}
+.food-bg{position:fixed;inset:0;z-index:0;overflow:hidden;pointer-events:none;}
+.food-bg video{position:absolute;inset:0;width:100vw;height:100vh;height:100dvh;height:100svh;object-fit:cover;display:block;pointer-events:none;}
+.food-bg::after{content:"";position:absolute;inset:0;background:rgba(0,0,0,.42);pointer-events:none;}
+.food-page .site-head{position:relative;z-index:1;background:none;}
+.food-main{position:relative;z-index:1;padding:clamp(48px,8vw,88px) var(--pad) clamp(72px,10vw,120px);max-width:36em;}
+.food-main .title{margin:0 0 18px;text-shadow:0 1px 12px rgba(0,0,0,.45);}
+.food-main .copy{margin:0;max-width:31em;font-size:14px;line-height:1.7;color:rgba(255,255,255,.88);text-shadow:0 1px 10px rgba(0,0,0,.4);}
 </style>
 </head>
 <body class="food-page">
+<div class="food-bg" aria-hidden="true">
+  <video src="../media/food-pasta-pour.mp4" poster="../media/food-pasta-pour-poster.jpg" autoplay muted loop playsinline preload="auto"></video>
+</div>
 <header class="site-head">
   <a class="brand" href="../index.html" aria-label="B. Moore, home"><span class="brand-name">B.MOORE</span><span class="brand-sub">Multi-disciplinary artist</span></a>
 </header>
