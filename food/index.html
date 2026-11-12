@@ -8,16 +8,26 @@
 <link rel="stylesheet" href="../css/site.css">
 <link rel="stylesheet" href="../css/lookbook.css">
 <style>
-.food-hero .title{position:absolute;z-index:2;left:var(--pad);bottom:clamp(36px,8vh,88px);margin:0;color:#fff;text-shadow:0 1px 14px rgba(0,0,0,.55);pointer-events:none;}
+.food-hero .title{position:absolute;z-index:2;left:var(--pad);top:108px;margin:0;color:#fff;text-align:left;text-shadow:0 1px 14px rgba(0,0,0,.55);pointer-events:none;}
 .food-hero video{pointer-events:none;}
+.food-rule{border:0;border-top:1px solid #fff;margin:0 var(--pad);}
+.food-lower{background:#000;color:#fff;padding-bottom:clamp(36px,5vw,56px);}
+.food-lower > .title{margin:clamp(48px,7vw,80px) var(--pad) 18px;text-align:center;}
+.food-paper.paper{--ink:#fff;--paper:#000;--mid:rgba(255,255,255,.72);--soft:#fff;background:#000;color:#fff;}
 .food-paper .fviewer{margin-top:0;padding-top:clamp(12px,2vw,20px);}
-.food-info{background:#fff;color:#111;text-align:center;padding:8px var(--pad) clamp(36px,5vw,56px);}
-.food-info .lookbook{max-width:36em;margin:0 auto;font-size:14px;line-height:1.75;color:#111;}
-.food-info .rep{max-width:36em;margin:18px auto 0;color:#333;}
-.food-info .rep a{color:#111;border-bottom-color:rgba(0,0,0,.55);}
+.food-lower .counter{color:#fff;}
+.food-lower .nav-btn{background:rgba(255,255,255,.16);color:#fff;}
+.food-lower .nav-btn:hover{background:rgba(255,255,255,.32);}
+.food-lower .strip button.on::after{border-color:#fff;}
+.food-lower .strip img,.food-lower .fstrip img{background:#000;}
+.food-info{background:#000;color:#fff;text-align:center;padding:8px var(--pad) 0;}
+.food-info .lookbook{max-width:36em;margin:0 auto;font-size:14px;line-height:1.75;color:#fff;}
+.food-info .rep{max-width:36em;margin:18px auto 0;color:#fff;}
+.food-info .rep a{color:#fff;border-bottom-color:#fff;}
 .food-info .ask{margin:22px 0 0;}
-.food-info .here-btn{display:inline-block;padding:11px 22px;border:1px solid #111;background:transparent;color:#111;text-decoration:none;font-family:var(--text);font-stretch:75%;font-size:12px;letter-spacing:.16em;text-transform:uppercase;line-height:1;}
-.food-info .here-btn:hover{background:rgba(0,0,0,.06);}
+.food-info .here-btn{display:inline-block;padding:11px 22px;border:1px solid #fff;background:transparent;color:#fff;text-decoration:none;font-family:var(--text);font-stretch:75%;font-size:12px;letter-spacing:.16em;text-transform:uppercase;line-height:1;}
+.food-info .here-btn:hover{background:rgba(255,255,255,.08);}
+@media (max-width:760px){.food-hero .title{top:84px;}}
 </style>
 </head>
 <body>
@@ -37,6 +47,9 @@
   <video src="../media/food-pasta-pour.mp4" poster="../media/food-pasta-pour-poster.jpg" autoplay muted loop playsinline preload="auto" aria-hidden="true"></video>
   <h1 class="title">Food</h1>
 </section>
+<hr class="food-rule">
+<section class="food-lower">
+<h2 class="title">Culinary Portfolio</h2>
 <div class="food-paper gal-paper paper">
   <section class="fviewer" id="fviewer" aria-roledescription="carousel" aria-label="Food photography">
     <div class="fstage" id="fstage" tabindex="0">
@@ -52,6 +65,7 @@
   <p class="lookbook">B. Moore's food photography has been published alongside countless celebrity chefs. He also partners with high-end restaurants on image consulting and social media management.</p>
   <p class="rep">B. Moore is represented by <a href="https://headless-xwjbrilancu-br4024-1406.wix-site-host.com" target="_blank" rel="noopener noreferrer">Sleeper Talent</a>. Food photography commissions are handled directly and fall outside that representation.</p>
   <p class="ask"><a class="here-btn" href="../contact.html">Click here to inquire.</a></p>
+</section>
 </section>
 <footer class="site-foot" id="site-footer">
   <span class="brand"><span class="brand-name">B.MOORE</span></span>
