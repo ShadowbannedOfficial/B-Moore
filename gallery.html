@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>B. Moore — Gallery</title>
+<link rel="stylesheet" href="css/site.css">
+<link rel="stylesheet" href="css/lookbook.css?v=587add1">
+<style>
+.page-top{background:#000;padding:92px 0 0;text-align:center;}
+.gal-eyes{display:block;width:100%;height:auto;}
+.gal-copy{padding:24px var(--pad) 0;}
+.gal-copy .kick{margin:0 0 9px;}
+.gn-lockup{display:inline-flex;flex-direction:column;align-items:center;margin:0 auto 9px;color:#fff;}
+.gn-lockup .word{font-family:"Nimbus Sans",sans-serif;font-weight:700;font-size:clamp(42px,6.4vw,68px);
+  letter-spacing:.04em;line-height:.9;margin:0;}
+.gn-lockup .sub{font-family:"Nimbus Sans",sans-serif;font-weight:700;font-size:clamp(18px,2.4vw,26px);
+  letter-spacing:.18em;line-height:1;margin:7px calc(-.18em + 4px) 0 0;text-align:center;}
+.gal-gap{height:24px;background:#000;}
+.gal-info{background:#fff;color:#111;text-align:center;padding:4px var(--pad) clamp(28px,4vw,40px);}
+.gal-info .lookbook{max-width:36em;margin:0 auto 14px;font-size:14px;line-height:1.75;color:#111;}
+.gal-info .lookbook:last-child{margin-bottom:0;}
+.gal-info .here-btn{display:inline-block;margin:0 0 0 .4em;padding:11px 22px;vertical-align:middle;border:1px solid #111;background:transparent;color:#111;text-decoration:none;font-family:var(--text);font-stretch:75%;font-size:12px;letter-spacing:.16em;text-transform:uppercase;line-height:1;}
+.gal-info .here-btn:hover{background:rgba(0,0,0,.06);}
+.gal-info .rep{margin-top:16px;color:#333;}
+.gal-info .rep a{color:#111;border-bottom-color:rgba(0,0,0,.55);}
+.gal-paper{background:#fff;color:#111;padding:clamp(12px,2vw,24px) 0 8px;}
+.gal-paper .fviewer{margin-top:0;padding-top:clamp(12px,2vw,20px);border-top:0;}
+.gal-paper .fgrp{display:none !important;}
+@media (max-width:760px){
+  .page-top{padding-top:78px;}
+  .gal-copy{padding-top:16px;}
+  .gal-gap{height:16px;}
+  .gn-lockup .sub{font-size:18px;letter-spacing:.14em;margin-right:calc(-.14em + 2px);}
+}
+</style>
+</head>
+<body>
+<header class="site-head">
+  <a class="brand" href="index.html" aria-label="B. Moore, home"><span class="brand-name">B.MOORE</span><span class="brand-sub">Multi-disciplinary artist</span></a>
+  <button class="menu-btn" type="button" aria-expanded="false" aria-controls="site-nav"><span></span><span></span><span></span><span class="sr">Menu</span></button>
+  <nav class="site-nav" id="site-nav" aria-label="Main">
+    <a href="about.html">About</a>
+    <a href="still.html">Still</a>
+    <a href="motion.html">Motion</a>
+    <a href="gallery.html" class="here" aria-current="page">Gallery</a>
+    <a href="fashion.html">Fashion</a>
+    <a href="contact.html">Contact</a>
+  </nav>
+</header>
+<div class="page-top">
+  <img class="gal-eyes" src="img/gallery/eyes.jpg" alt="Close portrait of eyes">
+  <div class="gal-copy">
+    <p class="kick" id="kick">Fine art photography</p>
+    <h1 class="gn-lockup"><span class="word">GLAMNOIR</span><span class="sub">COLLECTION</span></h1>
+  </div>
+</div>
+<div class="gal-gap" id="gal-gap"></div>
+<div class="gal-paper paper">
+  <section class="fviewer" id="fviewer" aria-roledescription="carousel" aria-label="Framed prints">
+    <div class="fstage" id="fstage" tabindex="0">
+      <button class="nav-btn fprev" id="fprev" type="button" aria-label="Previous frame">&#8249;</button>
+      <img id="fhero" src="img/frames/f05-transaction-black.jpg" alt="Transaction">
+      <button class="nav-btn fnext" id="fnext" type="button" aria-label="Next frame">&#8250;</button>
+    </div>
+    <p class="fcap" id="fcap"><span id="fcap-title"></span><span class="fgrp" id="fcap-frame"></span></p>
+    <p class="counter" id="fcounter"></p>
+    <div class="strip fstrip" id="fstrip" role="tablist" aria-label="All framed prints"></div>
+  </section>
+</div>
+<section class="gal-info" id="gal-info">
+  <p class="lookbook" id="blurb">The GLAMNOIR collection is currently on view at Gallery Defi. Large-format, concept-driven portraiture presented in painted or glitter gothic frames selected for each piece.</p>
+  <p class="lookbook" id="inquiry">Gallery and collector inquiries <a class="here-btn" href="contact.html">CLICK HERE</a></p>
+  <p class="rep">B. Moore is represented by <a href="https://headless-xwjbrilancu-br4024-1406.wix-site-host.com" target="_blank" rel="noopener noreferrer">Sleeper Talent</a>.</p>
+</section>
+<footer class="site-foot" id="site-footer">
+  <span class="brand"><span class="brand-name">B.MOORE</span></span>
+  <p class="foot-mail"><a href="contact.html">Contact</a></p>
+  <p class="foot-meta">All images &copy; B. Moore. Not for reproduction without permission.</p>
+</footer>
+<script src="js/nav.js"></script>
+<script src="js/frames.js?v=587add1"></script>
+</body>
+</html>

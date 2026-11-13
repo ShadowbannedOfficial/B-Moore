@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>B. Moore — Food</title>
+<link rel="stylesheet" href="../css/site.css?v=587add1">
+<link rel="stylesheet" href="../css/lookbook.css?v=587add1">
+<style>
+body{background:#000;}
+.food-hero .title{position:absolute;z-index:2;left:var(--pad);top:108px;margin:0;color:#fff;text-align:left;text-shadow:0 1px 14px rgba(0,0,0,.55);pointer-events:none;}
+.food-hero video{pointer-events:none;}
+.food-hero{margin:0;border:0;box-shadow:none;}
+@media (max-width:860px){
+  .food-hero{height:min(100svh,980px);min-height:520px;}
+  .food-hero video{
+    inset:auto;top:50%;left:50%;right:auto;bottom:auto;
+    width:auto;height:auto;max-width:none;
+    min-width:100%;min-height:100%;
+    transform:translate(-50%,-50%);
+    object-fit:cover;
+  }
+  .food-lower .fstage{overflow:hidden;}
+  .food-lower .fstage img{min-width:0;min-height:0;width:auto;height:auto;max-height:100%;}
+}
+.food-lower{background:#000;color:#fff;margin:0;border-top:0;box-shadow:none;padding-top:clamp(48px,8vw,96px);padding-bottom:clamp(36px,5vw,56px);}
+.food-lower > .title{margin:0 var(--pad) 18px;text-align:center;}
+.food-paper.paper{--ink:#fff;--paper:#000;--mid:rgba(255,255,255,.72);--soft:#fff;background:#000;color:#fff;}
+.food-paper .fviewer{margin-top:0;padding-top:clamp(12px,2vw,20px);}
+.food-lower .counter{color:#fff;}
+.food-lower .nav-btn{background:rgba(255,255,255,.16);color:#fff;}
+.food-lower .nav-btn:hover{background:rgba(255,255,255,.32);}
+.food-lower .strip button.on::after{border-color:#fff;}
+.food-lower .strip img,.food-lower .fstrip img{background:#000;}
+.food-info{background:#000;color:#fff;text-align:center;padding:8px var(--pad) 0;}
+.food-info .lookbook{max-width:36em;margin:0 auto;font-size:14px;line-height:1.75;color:#fff;}
+.food-info .rep{max-width:36em;margin:18px auto 0;color:#fff;}
+.food-info .rep a{color:#fff;border-bottom-color:#fff;}
+.food-info .ask{margin:22px 0 0;}
+.food-info .here-btn{display:inline-block;padding:11px 22px;border:1px solid #fff;background:transparent;color:#fff;text-decoration:none;font-family:var(--text);font-stretch:75%;font-size:12px;letter-spacing:.16em;text-transform:uppercase;line-height:1;}
+.food-info .here-btn:hover{background:rgba(255,255,255,.08);}
+@media (max-width:760px){.food-hero .title{top:84px;}}
+</style>
+</head>
+<body>
+<header class="site-head">
+  <a class="brand" href="../index.html" aria-label="B. Moore, home"><span class="brand-name">B.MOORE</span><span class="brand-sub">Multi-disciplinary artist</span></a>
+  <button class="menu-btn" type="button" aria-expanded="false" aria-controls="site-nav"><span></span><span></span><span></span><span class="sr">Menu</span></button>
+  <nav class="site-nav" id="site-nav" aria-label="Main">
+    <a href="../about.html">About</a>
+    <a href="../still.html">Still</a>
+    <a href="../motion.html">Motion</a>
+    <a href="../gallery.html">Gallery</a>
+    <a href="../fashion.html">Fashion</a>
+    <a href="../contact.html">Contact</a>
+  </nav>
+</header>
+<section class="bleed screen full food-hero" aria-label="Food">
+  <video src="../media/food-pasta-pour.mp4" poster="../media/food-pasta-pour-poster.jpg" autoplay muted loop playsinline preload="auto" aria-hidden="true"></video>
+  <h1 class="title">Food</h1>
+</section>
+<section class="food-lower">
+<h2 class="title">Culinary Portfolio</h2>
+<div class="food-paper gal-paper paper">
+  <section class="fviewer" id="fviewer" aria-roledescription="carousel" aria-label="Food photography">
+    <div class="fstage" id="fstage" tabindex="0">
+      <button class="nav-btn fprev" id="fprev" type="button" aria-label="Previous">&#8249;</button>
+      <img id="fhero" src="../media/food/food-14.jpg" alt="Food photograph 1" width="1206" height="1476" decoding="async" fetchpriority="high" loading="eager">
+      <button class="nav-btn fnext" id="fnext" type="button" aria-label="Next">&#8250;</button>
+    </div>
+    <p class="counter" id="fcounter"></p>
+    <div class="strip fstrip" id="fstrip" role="tablist" aria-label="Food photographs"></div>
+  </section>
+</div>
+<section class="food-info" id="food-info">
+  <p class="lookbook">B. Moore's food photography has been published alongside countless celebrity chefs. He also partners with high-end restaurants on image consulting and social media management.</p>
+  <p class="rep">B. Moore is represented by <a href="https://headless-xwjbrilancu-br4024-1406.wix-site-host.com" target="_blank" rel="noopener noreferrer">Sleeper Talent</a>. Food photography commissions are handled directly and fall outside that representation.</p>
+  <p class="ask"><a class="here-btn" href="../contact.html">Click here to inquire.</a></p>
+</section>
+</section>
+<footer class="site-foot" id="site-footer">
+  <span class="brand"><span class="brand-name">B.MOORE</span></span>
+  <p class="foot-mail"><a href="../contact.html">Contact</a></p>
+  <p class="foot-meta">All images &copy; B. Moore. Not for reproduction without permission.</p>
+</footer>
+<script src="../js/nav.js"></script>
+<script>
+var FOOD = [
+  { src:"../media/food/food-14.jpg", w:1206, h:1476, alt:"Food photograph 1" },
+  { src:"../media/food/food-01.jpg", w:1206, h:1375, alt:"Food photograph 2" },
+  { src:"../media/food/food-02.jpg", w:1206, h:1156, alt:"Food photograph 3" },
+  { src:"../media/food/food-03.jpg", w:1206, h:1254, alt:"Food photograph 4" },
+  { src:"../media/food/food-04.jpg", w:1206, h:1500, alt:"Food photograph 5" },
+  { src:"../media/food/food-05.jpg", w:1206, h:1398, alt:"Food photograph 6" },
+  { src:"../media/food/food-06.jpg", w:1206, h:1464, alt:"Food photograph 7" },
+  { src:"../media/food/food-07.jpg", w:1206, h:1478, alt:"Food photograph 8" },
+  { src:"../media/food/food-08.jpg", w:1206, h:1495, alt:"Food photograph 9" },
+  { src:"../media/food/food-09.jpg", w:1206, h:1476, alt:"Food photograph 10" },
+  { src:"../media/food/food-10.jpg", w:1206, h:1220, alt:"Food photograph 11" },
+  { src:"../media/food/food-11.jpg", w:1206, h:1353, alt:"Food photograph 12" },
+  { src:"../media/food/food-12.jpg", w:1206, h:1433, alt:"Food photograph 13" },
+  { src:"../media/food/food-13.jpg", w:1206, h:1303, alt:"Food photograph 14" }
+];
+(function(){
+  var box = document.getElementById("fviewer");
+  var stage = document.getElementById("fstage");
+  var hero = document.getElementById("fhero");
+  var counter = document.getElementById("fcounter");
+  var strip = document.getElementById("fstrip");
+  var i = 0;
+  FOOD.forEach(function(f, n){
+    var b = document.createElement("button");
+    b.type = "button";
+    b.setAttribute("role", "tab");
+    b.setAttribute("aria-label", "Photograph " + (n + 1));
+    var t = document.createElement("img");
+    t.alt = "";
+    t.width = f.w;
+    t.height = f.h;
+    t.decoding = "async";
+    if (n === 0) t.src = f.src;
+    else t.loading = "lazy";
+    b.appendChild(t);
+    b.addEventListener("click", function(){ show(n, true); });
+    strip.appendChild(b);
+  });
+  var buttons = strip.querySelectorAll("button");
+  function show(n, scroll){
+    i = (n + FOOD.length) % FOOD.length;
+    var f = FOOD[i];
+    var thumb = buttons[i].querySelector("img");
+    if (!thumb.getAttribute("src")) thumb.src = f.src;
+    hero.src = f.src;
+    hero.width = f.w;
+    hero.height = f.h;
+    hero.alt = f.alt;
+    counter.textContent = (i + 1) + " / " + FOOD.length;
+    for (var k = 0; k < buttons.length; k++){
+      buttons[k].classList.toggle("on", k === i);
+      buttons[k].setAttribute("aria-selected", k === i ? "true" : "false");
+    }
+    if (scroll && buttons[i]){
+      var b = buttons[i];
+      var left = b.offsetLeft - strip.clientWidth / 2 + b.offsetWidth / 2;
+      strip.scrollTo({ left: left, behavior: "smooth" });
+    }
+  }
+  document.getElementById("fprev").addEventListener("click", function(){ show(i - 1, true); });
+  document.getElementById("fnext").addEventListener("click", function(){ show(i + 1, true); });
+  box.addEventListener("keydown", function(e){
+    if (e.key === "ArrowLeft"){ show(i - 1, true); e.preventDefault(); }
+    else if (e.key === "ArrowRight"){ show(i + 1, true); e.preventDefault(); }
+  });
+  var x0 = null, y0 = null;
+  stage.addEventListener("touchstart", function(e){
+    x0 = e.touches[0].clientX; y0 = e.touches[0].clientY;
+  }, { passive: true });
+  stage.addEventListener("touchend", function(e){
+    if (x0 === null) return;
+    var dx = e.changedTouches[0].clientX - x0, dy = e.changedTouches[0].clientY - y0;
+    if (Math.abs(dx) > 40 && Math.abs(dx) > Math.abs(dy)) show(dx < 0 ? i + 1 : i - 1, true);
+    x0 = null;
+  });
+  if ("IntersectionObserver" in window){
+    var seen = false;
+    var watch = new IntersectionObserver(function(entries){
+      if (seen || !entries.some(function(en){ return en.isIntersecting; })) return;
+      seen = true;
+      watch.disconnect();
+      for (var n = 1; n < buttons.length; n++){
+        var img = buttons[n].querySelector("img");
+        if (!img.getAttribute("src")) img.src = FOOD[n].src;
+      }
+    }, { threshold: 0.2 });
+    watch.observe(box);
+  }
+  show(0, false);
+})();
+</script>
+</body>
+</html>
