@@ -51,8 +51,8 @@
     var mq = window.matchMedia("(max-width:760px) and (orientation: portrait)");
     function choose(){
       var vertical = mq.matches;
-      var src = vertical ? "media/motion-reel-vertical.mp4?v=fb920d6" : "media/motion-reel.mp4?v=d8222e5";
-      var poster = vertical ? "media/motion-reel-vertical-poster.jpg?v=fb920d6" : "media/motion-reel-poster.jpg?v=d8222e5";
+      var src = vertical ? "media/motion-reel-vertical.mp4?v=vert3" : "media/motion-reel.mp4?v=d8222e5";
+      var poster = vertical ? "media/motion-reel-vertical-poster.jpg?v=vert3" : "media/motion-reel-poster.jpg?v=d8222e5";
       if (v.getAttribute("data-choice") === src) return;
       v.pause();
       v.removeAttribute("src");
