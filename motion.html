@@ -4,11 +4,18 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>B. Moore — Motion</title>
-<link rel="stylesheet" href="css/site.css">
+<link rel="stylesheet" href="css/site.css?v=motionvert">
 <style>
 .motion-open{height:min(100svh,980px);min-height:520px;}
 .motion-open .vid-ctrls{top:110px;bottom:auto;right:var(--pad);left:auto;z-index:5;}
 @media (max-width:760px){.motion-open .vid-ctrls{top:100px;}}
+@media (max-width:760px) and (orientation:portrait){
+  .motion-open{height:auto;min-height:0;aspect-ratio:auto;}
+  .motion-open video{
+    position:relative;inset:auto;top:auto;right:auto;bottom:auto;left:auto;
+    width:100%;height:auto;max-height:none;object-fit:contain;background:transparent;
+  }
+}
 .commission{background:#000;color:#fff;padding:clamp(48px,8vw,96px) var(--pad) clamp(72px,10vw,120px);}
 .commission-in{max-width:34em;margin:0 auto;text-align:center;}
 .commission .title{margin-bottom:18px;}
@@ -37,7 +44,35 @@
   </nav>
 </header>
 <section class="bleed screen motion-open" aria-label="Director reel">
-  <video data-bg src="media/motion-reel.mp4" poster="media/motion-reel-poster.jpg" muted autoplay loop playsinline preload="auto" aria-label="B. Moore director reel"></video>
+  <video id="motion-reel" data-bg muted autoplay loop playsinline preload="none" aria-label="B. Moore director reel"></video>
+  <script>
+  (function(){
+    var v = document.getElementById("motion-reel");
+    var mq = window.matchMedia("(max-width:760px) and (orientation: portrait)");
+    function choose(){
+      var vertical = mq.matches;
+      var src = vertical ? "media/motion-reel-vertical.mp4" : "media/motion-reel.mp4";
+      var poster = vertical ? "media/motion-reel-vertical-poster.jpg" : "media/motion-reel-poster.jpg";
+      if (v.getAttribute("data-choice") === src) return;
+      v.pause();
+      v.removeAttribute("src");
+      v.load();
+      v.poster = poster;
+      v.muted = true;
+      v.defaultMuted = true;
+      v.playsInline = true;
+      v.setAttribute("muted", "");
+      v.setAttribute("playsinline", "");
+      v.preload = "auto";
+      v.setAttribute("data-choice", src);
+      v.src = src;
+      var play = v.play();
+      if (play && play.catch) play.catch(function(){});
+    }
+    choose();
+    if (mq.addEventListener) mq.addEventListener("change", choose);
+  })();
+  </script>
   <div class="vid-ctrls">
     <button class="vid-toggle" type="button">Pause</button>
     <button class="vid-sound" type="button" aria-pressed="false">Unmute</button>
@@ -69,6 +104,6 @@
   <p class="foot-mail"><a href="contact.html">Contact</a></p>
   <p class="foot-meta">All images &copy; B. Moore. Not for reproduction without permission.</p>
 </footer>
-<script src="js/nav.js"></script>
+<script src="js/nav.js?v=motionvert"></script>
 </body>
 </html>
