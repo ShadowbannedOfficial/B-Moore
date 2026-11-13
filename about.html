@@ -74,15 +74,21 @@
 <script>
 (function(){
   var copy = document.querySelector(".about .copy");
-  if (!copy) return;
+  var lede = document.querySelector(".about .lede");
+  if (!copy || !lede) return;
   var mq = window.matchMedia("(max-width:760px)");
   function place(){
+    lede.style.marginTop = "";
     copy.style.paddingTop = "0px";
     if (!mq.matches) return;
     var ps = copy.querySelectorAll("p");
     if (ps.length < 2) return;
-    var delta = ps[ps.length - 2].getBoundingClientRect().top - copy.getBoundingClientRect().top;
-    if (delta > 0) copy.style.paddingTop = delta + "px";
+    var target = ps[ps.length - 2].getBoundingClientRect().top;
+    var delta = target - lede.getBoundingClientRect().top;
+    if (delta > 0){
+      var base = parseFloat(getComputedStyle(lede).marginTop) || 0;
+      lede.style.marginTop = (base + delta) + "px";
+    }
   }
   place();
   window.addEventListener("resize", place);
