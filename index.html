@@ -30,7 +30,35 @@ body{background:#000;}.landing{height:100vh;height:100svh;}
 </header>
 <main>
   <section class="bleed screen landing" aria-label="Director reel">
-    <video data-bg src="media/motion-skyline.mp4" poster="media/motion-skyline-poster.jpg" muted autoplay loop playsinline preload="auto" aria-label="Motion: city footage at dusk and night"></video>
+    <video id="home-reel" data-bg muted autoplay loop playsinline preload="none" aria-label="Motion: city footage at dusk and night"></video>
+    <script>
+    (function(){
+      var v = document.getElementById("home-reel");
+      var mq = window.matchMedia("(max-width:760px) and (orientation: portrait)");
+      function choose(){
+        var vertical = mq.matches;
+        var src = vertical ? "media/home-motion-vertical.mp4?v=restore1" : "media/home-motion-wide.mp4?v=restore1";
+        var poster = vertical ? "media/home-motion-vertical-poster.jpg?v=restore1" : "media/home-motion-wide-poster.jpg?v=restore1";
+        if (v.getAttribute("data-choice") === src) return;
+        v.pause();
+        v.removeAttribute("src");
+        v.load();
+        v.poster = poster;
+        v.muted = true;
+        v.defaultMuted = true;
+        v.playsInline = true;
+        v.setAttribute("muted", "");
+        v.setAttribute("playsinline", "");
+        v.preload = "auto";
+        v.setAttribute("data-choice", src);
+        v.src = src;
+        var play = v.play();
+        if (play && play.catch) play.catch(function(){});
+      }
+      choose();
+      if (mq.addEventListener) mq.addEventListener("change", choose);
+    })();
+    </script>
     <div class="vid-ctrls">
       <button class="vid-toggle" type="button">Pause</button>
     </div>
