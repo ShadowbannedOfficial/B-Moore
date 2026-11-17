@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>B. Moore — Contact</title>
+<link rel="stylesheet" href="css/site.css">
+<style>
+.contact-open{min-height:100svh;display:flex;align-items:center;justify-content:center;
+  padding:140px var(--pad) 96px;text-align:center;}
+.contact-open::before{content:"";position:absolute;inset:0;background:rgba(0,0,0,.5);z-index:1;}
+.contact-in{position:relative;z-index:2;width:min(440px,100%);}
+.contact-in .title{margin-bottom:14px;}
+.contact-in .cats{margin:0 0 28px;font-stretch:75%;font-size:12px;letter-spacing:.12em;
+  text-transform:uppercase;color:rgba(255,255,255,.85);}
+.inquiry{background:rgba(0,0,0,.55);border:1px solid rgba(255,255,255,.35);padding:22px 20px 20px;text-align:left;}
+.inquiry label{display:block;margin:0 0 6px;font-stretch:75%;font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:rgba(255,255,255,.7);}
+.inquiry .field{margin:0 0 14px;}
+.inquiry input,.inquiry textarea{width:100%;box-sizing:border-box;background:rgba(0,0,0,.35);
+  border:1px solid rgba(255,255,255,.35);color:#fff;padding:11px 12px;font:inherit;font-size:14px;}
+.inquiry textarea{min-height:120px;resize:vertical;}
+.inquiry input:focus,.inquiry textarea:focus{outline:1px solid #fff;border-color:#fff;}
+.inquiry .send{display:inline-block;margin-top:4px;padding:12px 22px;border:1px solid #fff;background:transparent;
+  color:#fff;font-family:var(--text);font-stretch:75%;font-size:12px;letter-spacing:.14em;text-transform:uppercase;cursor:pointer;}
+.inquiry .send:hover{background:rgba(255,255,255,.08);}
+.inquiry .note{margin:14px 0 0;font-size:11px;line-height:1.5;color:rgba(255,255,255,.55);}
+@media (max-width:760px){.contact-open{align-items:flex-start;padding-top:120px;}.inquiry{padding:18px 16px;}}
+</style>
+</head>
+<body>
+<header class="site-head">
+  <a class="brand" href="index.html" aria-label="B. Moore, home"><span class="brand-name">B.MOORE</span><span class="brand-sub">Multi-disciplinary artist</span></a>
+  <button class="menu-btn" type="button" aria-expanded="false" aria-controls="site-nav"><span></span><span></span><span></span><span class="sr">Menu</span></button>
+  <nav class="site-nav" id="site-nav" aria-label="Main">
+    <a href="about.html">About</a>
+    <a href="still.html">Still</a>
+    <a href="motion.html">Motion</a>
+    <a href="gallery.html">Gallery</a>
+    <a href="fashion.html">Fashion</a>
+    <a href="contact.html" class="here" aria-current="page">Contact</a>
+  </nav>
+</header>
+<main>
+  <section class="bleed screen contact-open" aria-label="Contact">
+    <video data-bg src="media/contact.mp4" poster="media/contact-poster.jpg" muted autoplay loop playsinline preload="auto" aria-label="Hands typing on a keyboard"></video>
+    <div class="vid-ctrls">
+      <button class="vid-toggle" type="button">Pause</button>
+    </div>
+    <div class="contact-in">
+      <h1 class="title">Contact</h1>
+      <p class="cats">Commissions &middot; Film/Commercial &middot; Gallery inquiries</p>
+      <form class="inquiry" action="https://formsubmit.co/brian@bmoore-creative.com" method="POST">
+        <input type="hidden" name="_subject" value="B. Moore — Website inquiry">
+        <input type="hidden" name="_template" value="table">
+        <input type="hidden" name="_captcha" value="true">
+        <input type="hidden" name="_autoresponse" value="I got your message and will reply shortly.">
+        <div class="field">
+          <label for="inq-name">Name</label>
+          <input id="inq-name" name="name" type="text" autocomplete="name" required>
+        </div>
+        <div class="field">
+          <label for="inq-email">Email</label>
+          <input id="inq-email" name="email" type="email" autocomplete="email" required>
+        </div>
+        <div class="field">
+          <label for="inq-message">Message</label>
+          <textarea id="inq-message" name="message" required></textarea>
+        </div>
+        <button class="send" type="submit">Send inquiry</button>
+        <p class="note">Your message will be sent securely. A confirmation will be sent to your email.</p>
+      </form>
+    </div>
+  </section>
+</main>
+<footer class="site-foot" id="site-footer">
+  <span class="brand"><span class="brand-name">B.MOORE</span></span>
+  <p class="foot-mail"><a href="contact.html">Contact</a></p>
+  <p class="foot-meta">All images &copy; B. Moore. Not for reproduction without permission.</p>
+</footer>
+<script src="js/nav.js"></script>
+</body>
+</html>

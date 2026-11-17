@@ -1,0 +1,13 @@
+B. Moore site — two-part download
+================================
+Unzip BOTH into the SAME parent folder so they merge:
+
+  unzip bmoore-site-part1.zip
+  unzip bmoore-site-part2.zip
+
+You get one folder: bmoore-site/
+Open: bmoore-site/index.html
+
+Part1 = pages, styles, fonts, most images, fashion assets, skyline video.
+Part2 = director reel (motion-reel.mp4), still-portrait.mp4, and a few large gallery/frame images that did not fit in part1.
+Same relative paths; unzip merges cleanly. No duplicate filenames across the two zips.
